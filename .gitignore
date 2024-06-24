@@ -1,0 +1,7 @@
+dataFiles
+summary
+configs
+
+# Output and text
+*txt*
+!config.txt
