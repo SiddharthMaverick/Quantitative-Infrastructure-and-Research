@@ -1,0 +1,28 @@
+import pandas as pd
+import os
+from Strategy import Strategy
+
+class Simulator:
+    def __init__(self,configFilePath):
+        #read config.txt
+        self.startDate="20230115"
+        self.endDate="20230118"
+        self.symbols=["MARK:C-BTC-20300-180123.csv","MARK:C-BTC-21300-180123.csv","MARK:P-BTC-21300-180123.csv","MARK:P-BTC-20300-180123.csv"]
+        self.readData()
+        self.startSimulation()
+        self.strategy=Strategy()
+    def readData(self):
+        self.df=pd.DataFrame()
+        date=self.startDate
+        while date<=self.endDate:
+            for symbol in self.symbols:
+                tempDf=read_csv()
+                appendToDf
+        sortDfByTime
+    def startSimulation(self):
+        for row in self.df.iterrows():
+            self.strategy.onMarketData(row)
+
+    def sendOrder(self,symbol,side,quantity,price):
+        pass
+
